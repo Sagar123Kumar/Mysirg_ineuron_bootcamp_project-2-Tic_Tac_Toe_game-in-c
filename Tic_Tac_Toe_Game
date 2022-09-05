@@ -496,7 +496,6 @@ void Enter_evil_com_Position_value(char arr[][3],char name[3][30])   // For play
         i=winGame(arr);
         player++;
         if(i==-1){
-            if(player==2){
         // for win
         // first row
         flag=0;
@@ -609,10 +608,11 @@ void Enter_evil_com_Position_value(char arr[][3],char name[3][30])   // For play
         arr[0][2] = 'O';
         flag=1;
          }
-
+        i=winGame(arr);
+        if(i==-1){
     // for defend
     // first row
-    else if (arr[0][0] == 'X' && arr[0][1] == 'X' && arr[0][2] != 'O'){
+    if (arr[0][0] == 'X' && arr[0][1] == 'X' && arr[0][2] != 'O'){
         arr[0][2] = 'O';
         flag=1;
          }
